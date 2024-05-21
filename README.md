@@ -52,20 +52,3 @@ To train the model (this step is optional if you already have the trained model)
 3. Train the XGBoost model.
 4. Save the trained model to a file using `joblib`.
 
-Here is a basic example of training the model:
-
-```python
-import pandas as pd
-import joblib
-from xgboost import XGBClassifier
-
-# Load and preprocess data
-data = pd.read_csv('path_to_your_dataset.csv')
-# ... (data preprocessing steps)
-
-# Train the model
-model = XGBClassifier()
-model.fit(X, y)
-
-# Save the model
-joblib.dump(model, 'xgb_model.pkl')
